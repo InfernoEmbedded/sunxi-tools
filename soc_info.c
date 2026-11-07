@@ -191,7 +191,7 @@ sram_swap_buffers a523_sram_swap_buffers[] = {
 };
 
 sram_swap_buffers a733_sram_swap_buffers[] = {
-	{ .buf1 = 0x47000, .buf2 = 0x72400, .size = 0x1C00 },
+	{ .buf1 = 0x47000, .buf2 = 0x87200, .size = 0x1C00 },
 	{ .size = 0 }  /* End of the table */
 };
 
@@ -670,10 +670,10 @@ soc_info_t soc_info_table[] = {
 		.soc_id       = 0x1903, /* Allwinner A733 */
 		.name         = "A733",
 		.spl_addr     = 0x47000,
-		.scratch_addr = 0x71000,
-		.thunk_addr   = 0x72000, .thunk_size = 0x200,
+		.scratch_addr = 0xEE800,
+		.thunk_addr   = 0xEEA00, .thunk_size = 0x200,
 		.swap_buffers = a733_sram_swap_buffers,
-		.sram_size    = 180 * 1024,
+		.sram_size    = 320 * 1024,
 		.sid_base     = 0x03006000,
 		.sid_offset   = 0x200,
 		.sid_sections = generic_2k_sid_maps,
